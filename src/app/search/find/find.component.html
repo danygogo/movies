@@ -12,3 +12,31 @@
        
     </div>
 </div>
+
+
+<div class="row d-flex justify-content-center">
+    <div class="col-8" *ngFor = "let element of movies; let i = index">
+
+        <div class="col-2">
+            <img [src]="element.Poster"> 
+            <br>
+            Title: 
+            {{ element.Title }}
+            <br>
+            See more...
+
+        </div>
+
+
+        <!--
+            <ul class="list-group" >
+            <li class="list-group-item" >
+
+            </li>
+        </ul>
+
+        -->
+        
+
+    </div>
+</div>

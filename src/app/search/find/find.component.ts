@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Find } from '../interfaces/find.interface';
+import { Find, Search } from '../interfaces/find.interface';
 import { FindService } from '../services/find.service';
 
 @Component({
@@ -9,8 +9,8 @@ import { FindService } from '../services/find.service';
 })
 export class FindComponent implements OnInit {
   entry: string = ""
-  movies: Find[] = [];
-
+  movies: Search[] = [];
+ 
   constructor(private findService: FindService) { }
 
   ngOnInit(): void {
@@ -18,11 +18,19 @@ export class FindComponent implements OnInit {
 
   search(entry : string){
     this.entry = entry;
-    console.log("Me encuentro en el primer llamado, en metodo search, El valor digitado es:" + entry)
-    /*this.findService.searchMovie(entry).subscribe((resp) =>{
-      this.movies = resp;
+    console.log("Me encuentro en el \
+    primer llamado, en metodo search, El valor digitado es:" + entry)
+    this.findService.searchMovie(entry).subscribe((resp) =>{
+      this.movies = resp.Search
       console.log(this.movies)
-    })*/
+      console.log(this.movies[0].Title)
+
+   
+      /*
+      Esto logra capturar el titulo
+      console.log(resp.Search[0].Title)*/
+
+    })
 
 
   }//End of search
