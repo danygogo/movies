@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from "@angular/common/http"
 import { Observable } from 'rxjs';
 import { Find, Search } from '../interfaces/find.interface';
+import { ResultInterface } from '../results/interfaces/results.interface';
 
 
 
@@ -19,4 +20,11 @@ export class FindService {
     
     return this.http.get<Find>(url)
   }
+
+  searchID(term: string): Observable<ResultInterface>{
+    console.log("He entrado al search por ID")
+    const url = `${this.apiURL}&i=${term}&plot=full`
+    return this.http.get<ResultInterface>(url)
+  }
+
 }

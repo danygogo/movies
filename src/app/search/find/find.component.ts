@@ -10,6 +10,7 @@ import { FindService } from '../services/find.service';
 export class FindComponent implements OnInit {
   entry: string = ""
   movies: Search[] = [];
+  //imdbID: string = ""
  
   constructor(private findService: FindService) { }
 
@@ -24,12 +25,6 @@ export class FindComponent implements OnInit {
       this.movies = resp.Search
       console.log(this.movies)
       console.log(this.movies[0].Title)
-
-   
-      /*
-      Esto logra capturar el titulo
-      console.log(resp.Search[0].Title)*/
-
     })
 
 
