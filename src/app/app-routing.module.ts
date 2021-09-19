@@ -2,12 +2,18 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ResultComponent } from "./search/results/result/result.component"
 import { FindComponent } from './search/find/find.component';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
     path: "",
-    component: FindComponent,
+    component: HomeComponent,
     pathMatch: "full"
+  },
+  {
+    path: "type/:type",
+    component: FindComponent,
   },
   {
     path: "movie/:imdbID",
@@ -15,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: "**",
-    redirectTo: ""
+    component: NotFoundComponent
   }
 ]
 

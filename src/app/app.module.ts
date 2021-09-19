@@ -26,7 +26,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
     CommonModule
   ],
   providers: [
-
   ],
   bootstrap: [AppComponent]
 })
