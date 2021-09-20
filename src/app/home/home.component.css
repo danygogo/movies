@@ -1,0 +1,23 @@
+  
+img{
+
+    height: 350px;
+}
+
+.divCarousel{
+    background-color: black;
+}
+
+.mx-left{
+    margin-left: 200px;
+}
+
+.carousel-caption{
+    position: sticky;
+}
+
+.row{
+    margin-top: 75px;
+    margin-left: 150px;
+    margin-right: 150px;
+}

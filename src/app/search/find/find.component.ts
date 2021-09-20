@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Find, Search } from '../interfaces/find.interface';
 import { FindService } from '../services/find.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-find',
@@ -8,11 +9,19 @@ import { FindService } from '../services/find.service';
   styleUrls: ['./find.component.css']
 })
 export class FindComponent implements OnInit {
+
+  @Input("type") type: string = ""
+
   entry: string = ""
   movies: Search[] = [];
-  //imdbID: string = ""
+  preference: string = ""
  
-  constructor(private findService: FindService) { }
+  constructor(private findService: FindService,
+    private activatedRoute: ActivatedRoute) { 
+      this.activatedRoute.params
+    .subscribe( resp => {
+      this.preference = resp.type
+    } )}
 
   ngOnInit(): void {
   }
@@ -21,7 +30,8 @@ export class FindComponent implements OnInit {
     this.entry = entry;
     console.log("Me encuentro en el \
     primer llamado, en metodo search, El valor digitado es:" + entry)
-    this.findService.searchMovie(entry).subscribe((resp) =>{
+    this.findService.searchMovie(entry, this.preference)
+    .subscribe((resp) =>{
       this.movies = resp.Search
       console.log(this.movies)
       console.log(this.movies[0].Title)

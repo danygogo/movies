@@ -14,9 +14,9 @@ export class FindService {
 
   constructor(private http: HttpClient) { }
 
-  searchMovie(term: string): Observable<Find>{
+  searchMovie(term: string, type: string): Observable<Find>{
     console.log("He entrado al search del service")
-    const url = `${this.apiURL}&s=${term}`
+    const url = `${this.apiURL}&s=${term}&type=${type}`
     
     return this.http.get<Find>(url)
   }

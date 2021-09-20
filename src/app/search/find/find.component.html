@@ -1,7 +1,7 @@
 
 <div class="row d-flex justify-content-center">
     <div class="col-8">
-        <h2>Search a movie you are interested in... </h2>
+        <h2>Search a title you are interested in... </h2>
       
             <input type="text"
             class = "form-control"
@@ -17,13 +17,13 @@
 <div class="row d-flex justify-content-center">
     <div class="col-8" *ngFor = "let element of movies; let i = index">
 
-            <!--Movies are showed-->
+            <!--Movies or series are showed-->
             <img [src]="element.Poster"> 
             <br>
             Title: 
             {{ element.Title }}
             <br>
-            imbdID {{element.imdbID}}
+            Type: {{element.Type}}
             <br>
             <a [routerLink] = "['movie/', element.imdbID]">See more...</a>
 
