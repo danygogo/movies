@@ -16,7 +16,7 @@ const routes: Routes = [
     component: FindComponent,
   },
   {
-    path: "movie/:imdbID",
+    path: "type/:type/movie/:imdbID",
     component: ResultComponent
   },
   {
