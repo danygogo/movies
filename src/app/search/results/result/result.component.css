@@ -1,3 +1,28 @@
-.movieContainer{
-    background-color: white;
+.col-sm{
+    margin: 40px;
+}
+
+.container-fluid{
+    margin-bottom: 2%;
+}
+
+.col-md-4{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.col-md-6{
+    padding: 2%;
+}
+
+body{
+    height: 100%;
+}
+
+.prPlot{
+    text-align: justify;
+}
+
+.card{
+    border-color: white;
 }

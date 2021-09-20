@@ -1,21 +1,28 @@
-.col-8{
-    background-color: white;
-    padding: 10px;
-    opacity: 0.8;
-}
 
-.row{
-    
-    margin-top: 20px;
-    padding: 10px;
-    opacity: 1
+.col-sm{
+    margin: 40px;
 }
 
 img{
-    opacity: 1;
+
 }
 
-.col-2{
-    background-color: white;
-    height: 100px;
+.container-fluid{
+    margin-bottom: 2%;
 }
+
+.btn-primary{
+    width: 30%;
+}
+
+.col-md-4{
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 2%;
+}
+
+
+.card{
+    padding: 3%;
+}
+

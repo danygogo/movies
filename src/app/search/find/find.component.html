@@ -1,32 +1,35 @@
 
-<div class="row d-flex justify-content-center">
-    <div class="col-8">
-        <h2>Search a title you are interested in... </h2>
-      
+<div class="container-fluid text-white bg-dark">
+    <div class="row h-25">
+        <div class="col-sm">
+            <h2>Search a title you are interested in... </h2>
+        </div>
+    
+        <div class="col-sm">
             <input type="text"
             class = "form-control"
             placeholder="Write a title or a keyword"
             (keyup.enter) = "search(entry.value)"
             #entry
             >
-       
+        </div>
     </div>
+
 </div>
 
 
-<div class="row d-flex justify-content-center">
-    <div class="col-8" *ngFor = "let element of movies; let i = index">
 
-            <!--Movies or series are showed-->
-            <img [src]="element.Poster"> 
-            <br>
-            Title: 
-            {{ element.Title }}
-            <br>
-            Type: {{element.Type}}
-            <br>
-            <a [routerLink] = "['movie/', element.imdbID]">See more...</a>
-
+<div class = "row pictures">
+    <div class = "col-md-4 col-sm-6" *ngFor = "let element of movies">
+        <div class= "card">
+            <img [src]="element.Poster" 
+                [alt]="element.Title"
+                class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title"> <strong>Title: </strong> {{ element.Title }}</h5>
+                <a class="btn btn-dark" [routerLink] = "['movie/', element.imdbID]">See more...</a>
+            </div>
+        </div>
     </div>
 </div>
 
