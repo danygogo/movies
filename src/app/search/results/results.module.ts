@@ -8,7 +8,7 @@ import { ResultComponent } from './result/result.component';
     ResultComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports:[
 

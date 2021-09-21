@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Find, Search } from '../interfaces/find.interface';
+import { Search } from '../interfaces/find.interface';
 import { FindService } from '../services/find.service';
 import { ActivatedRoute } from '@angular/router';
 
