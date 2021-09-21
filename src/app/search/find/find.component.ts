@@ -31,6 +31,7 @@ export class FindComponent implements OnInit {
     this.findService.searchMovie(entry, this.preference)
     .subscribe((resp) =>{
       this.movies = resp.Search
+      console.log(this.movies)
     })
   }//End of search
 

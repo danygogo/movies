@@ -28,3 +28,8 @@
 input{
     border-radius: 30px;
 }
+
+.alert{
+    margin-left: 3%;
+    margin-right: 70%;
+}
