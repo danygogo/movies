@@ -23,8 +23,7 @@ export class ResultComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params
     .pipe(
-      switchMap((params) => this.findService.searchID(params.imdbID)),
-      tap(console.log)
+      switchMap((params) => this.findService.searchID(params.imdbID))
     )
     .subscribe(resp =>{
       this.movie = resp

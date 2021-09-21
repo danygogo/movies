@@ -28,16 +28,10 @@ export class FindComponent implements OnInit {
 
   search(entry : string){
     this.entry = entry;
-    console.log("Me encuentro en el \
-    primer llamado, en metodo search, El valor digitado es:" + entry)
     this.findService.searchMovie(entry, this.preference)
     .subscribe((resp) =>{
       this.movies = resp.Search
-      console.log(this.movies)
-      console.log(this.movies[0].Title)
     })
-
-
   }//End of search
 
 }

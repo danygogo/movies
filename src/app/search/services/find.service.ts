@@ -15,14 +15,11 @@ export class FindService {
   constructor(private http: HttpClient) { }
 
   searchMovie(term: string, type: string): Observable<Find>{
-    console.log("He entrado al search del service")
     const url = `${this.apiURL}&s=${term}&type=${type}`
-    
     return this.http.get<Find>(url)
   }
 
   searchID(term: string): Observable<ResultInterface>{
-    console.log("He entrado al search por ID")
     const url = `${this.apiURL}&i=${term}&plot=full`
     return this.http.get<ResultInterface>(url)
   }
