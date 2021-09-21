@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Search } from '../interfaces/find.interface';
 import { FindService } from '../services/find.service';
 import { ActivatedRoute } from '@angular/router';
@@ -9,8 +9,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./find.component.css']
 })
 export class FindComponent implements OnInit {
-
-  @Input("type") type: string = ""
 
   entry: string = ""
   movies: Search[] = [];

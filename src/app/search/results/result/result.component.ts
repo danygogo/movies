@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FindService } from '../../services/find.service';
-import { switchMap, tap } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
 import { ResultInterface } from '../interfaces/results.interface';
 
 @Component({
@@ -12,8 +12,6 @@ import { ResultInterface } from '../interfaces/results.interface';
 export class ResultComponent implements OnInit {
 
   movie!: ResultInterface
-
-  @Input("imdbID") imdbID: string = ""
 
   constructor(
     private activatedRoute: ActivatedRoute, 
