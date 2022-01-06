@@ -13,6 +13,7 @@ export class ResultComponent implements OnInit {
 
   movie!: ResultInterface
 
+
   constructor(
     private activatedRoute: ActivatedRoute, 
     private findService: FindService

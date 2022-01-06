@@ -1,35 +1,30 @@
-
-.col-sm{
-    margin: 40px;
-    margin-left: 9%;
-    margin-right: 9%;
+.search{
+    background-color: black;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
 }
 
 
-.container-fluid{
-    margin-bottom: 2%;
-}
-
-.btn-primary{
-    width: 30%;
-}
-
-.col-md-4{
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-bottom: 2%;
+.bg-dark{
+    background-color: black;
 }
 
 
-.card{
-    padding: 3%;
+.title{
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-input{
-    border-radius: 30px;
+a{
+    position: fixed;
+    top: 5%;
+    left: 2%;
 }
 
-.alert{
-    margin-left: 3%;
-    margin-right: 70%;
+i{
+    margin-right: 5px;
 }
