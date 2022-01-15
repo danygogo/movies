@@ -1,0 +1,26 @@
+<div class="container-fluid text-white bg-dark headerContainer">
+    <div class="row h-25">
+        <div class="col-sm titleContainer">
+            <h2>Coincidences</h2>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+
+    <div class = "row pictures">
+        <div class = "col-md-4 col-sm-6 mb-2" *ngFor = "let element of movies; let i = index">
+            <div class= "card">
+                <img [src]="element.Poster" 
+                    [alt]="element.Title"
+                    class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title"> <strong>Title: </strong> {{ element.Title }}</h5>
+                    <a class="btn btn-dark" 
+                    (click)="seeDetails(i)">See more...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
