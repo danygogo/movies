@@ -8,10 +8,9 @@ The REST API is avaible on [OMDBapi](http://www.omdbapi.com/)
 ## Technology
 This project was created using Angular. The principal concepts applied are:
 * HTTP requests (using a third parties API)
-* RXJS operators (map, tap)
+* RXJS operators (map, tap, switchMap)
 * Observables
 * activatedRoute
 * Interfaces
-* switchMap
 * Bootstrap
 
